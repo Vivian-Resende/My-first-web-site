@@ -1,0 +1,65 @@
+<html>
+<title>Success</title> <br>
+<div style="height:200px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png" />
+<br>
+<link rel="stylesheet" href="./css/style.css">
+
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="AboutUs.html">ABOUT US</a></li>
+<li><a href="ContactUs.html">CONTACT US</a></li>
+<li><a href="ProductsServices.html">PODUCTS/SERVICES</a></li>
+<li><a href="Gallery.html">GALLERY</a></li>
+<li><a href="Order.html">BUY IT NOW</a></li>
+<li><a href="Success.html">SUCCESS</a></li>
+</ul>
+</nav>
+<a href="index.html">Home</a> > Success
+<br>
+<head>
+<br>
+<script src="http://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript">
+window.onload = function () {
+	var chart = new CanvasJS.Chart("chartContainer", {
+		theme: "theme2",//theme1
+		title:{
+			text: "Best Selling Pizzas"              
+		},
+		animationEnabled: true,   // change to true
+		data: [              
+		{
+			// Change type to "bar", "area", "spline", "pie",etc.
+			type: "column",
+			dataPoints: [
+				{ label: "Cheese",  y: 100  },
+				{ label: "Tuna", y: 150  },
+				{ label: "Margarita", y: 250  },
+				{ label: "Pepperoni",  y: 300  },
+				{ label: "Hawaiian",  y: 280  }
+			]
+		}
+		]
+	});
+	chart.render();
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 97%;"></div>
+</body>
+<footer>
+<div style="height:250px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png"/>
+
+<br>
+46 Talbot street, Dublin 1, Dublin, Ireland.</br>
+<br>
+Phone no : 01-8194605 </br>
+<br> Copyright 2017 Star Pizza </br>
+<br></br>
+</div>
+</footer>
+</html>

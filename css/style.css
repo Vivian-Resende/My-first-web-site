@@ -1,0 +1,45 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+align: center;
+}
+head {
+background-color:red;
+}
+*{
+padding:0;
+margin:0;
+}
+nav ul {
+    list-style-type: none;  
+    overflow: hidden;
+    background-color: red;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: black;
+}
+
+.active {
+    background-color: black;
+}
+Body {
+	background-color: red;
+font:20px/1.5 Arial;
+}

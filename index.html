@@ -1,0 +1,141 @@
+<html>
+<head>
+<title>Home</title> <br>
+<div style="height:200px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png" />
+<br>
+<link rel="stylesheet" href="./css/style.css">
+
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="AboutUs.html">ABOUT US</a></li>
+<li><a href="ContactUs.html">CONTACT US</a></li>
+<li><a href="ProductsServices.html">PODUCTS/SERVICES</a></li>
+<li><a href="Gallery.html">GALLERY</a></li>
+<li><a href="Order.html">BUY IT NOW</a></li>
+<li><a href="Success.html">SUCCESS</a></li>
+</ul>
+</nav>
+<br>
+</div>
+</head>
+
+<body>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Autocomplete - Custom data and display</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #project-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
+  #project-icon {
+    float: left;
+    height: 32px;
+    width: 62px;
+  }
+  #project-description {
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    var projects = [
+      {
+        value: "cheese",
+        label: "Cheese",
+        desc: "Pizza: cheese and tamato sauce ",
+        icon: "cheese.jpg"
+      },
+      {
+        value: "pepperoni",
+        label: "Pepperoni",
+        desc: "Pizza: pepperoni, cheese and tamato sauce",
+        icon: "pepperoni.png"
+      },
+	   {
+        value: "hawaiian",
+        label: "Hawaiian",
+        desc: "Pizza: ham, cheese, pineapple and tamato sauce",
+        icon: "hawaiian.png"
+      },
+	   {
+        value: "tuna",
+        label: "Tuna",
+        desc: "Pizza: tuna, cheese and tamato sauce",
+        icon: "atum.jpg"
+      },
+      {
+        value: "margarita",
+        label: "Margarita",
+        desc: "Pizza: tomato, cheese, basil leaves and tomato sauce",
+        icon: "margarita.jpg"
+      }
+    ];
+ 
+    $( "#project" ).autocomplete({
+      minLength: 0,
+      source: projects,
+      focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        $( "#project-id" ).val( ui.item.value );
+        $( "#project-description" ).html( ui.item.desc );
+        $( "#project-icon" ).attr( "src", "img/" + ui.item.icon );
+ 
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<div>" + item.label + "<br>" + item.desc + "</div>" )
+        .appendTo( ul );
+    };
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="project-label">Search:</div>
+<img id="project-icon" src="img/lupa.jpg" class="ui-state-default" alt="">
+<input id="project">
+<input type="hidden" id="project-id">
+<p id="project-description"></p>
+ 
+<br>
+<br>
+
+<div>
+ <img height="420" width="600" src="./img/starpizza.jpg" />
+<img src="./img/principal.jpg" /> 
+</div>
+
+<div>
+<img height="300" width="600" src="./img/pizzadelivery.jpg" />
+<img height="300" width="700" src="./img/combo1.jpg" /> 
+</div>
+</body>
+
+<footer>
+<div style="height:200px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png"/>
+
+<br>
+46 Talbot street, Dublin 1, Dublin, Ireland.</br>
+<br>
+Phone no : 01-8194605 </br>
+<br> Copyright 2017 Star Pizza </br>
+</div>
+</footer>
+
+</html>

@@ -1,0 +1,129 @@
+<html>
+<title>Order</title> <br>
+<div style="height:200px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png" />
+<br>
+<link rel="stylesheet" href="./css/style.css">
+
+<nav>
+<ul>
+<li><a href="index.html">HOME</a></li>
+<li><a href="AboutUs.html">ABOUT US</a></li>
+<li><a href="ContactUs.html">CONTACT US</a></li>
+<li><a href="ProductsServices.html">PODUCTS/SERVICES</a></li>
+<li><a href="Gallery.html">GALLERY</a></li>
+<li><a href="Order.html">BUY IT NOW</a></li>
+<li><a href="Success.html">SUCCESS</a></li>
+</ul>
+</nav>
+
+<a href="index.html">Home</a> > Order
+</div>
+<br>
+<link rel="stylesheet" href="./css/style.css">
+
+<lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Accordion - Default functionality</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+
+  $( function() {
+    $( "#accordion" ).accordion();
+	$( "#datepicker" ).datepicker();
+	$( document ).tooltip();
+	$( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+		
+      }
+	  
+    });
+ 
+    $( "#opener" ).on( "click", function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  } );
+  </script>
+</head>
+<body>
+ 
+<div id="accordion">
+  <h3>Order Information</h3>
+  <div>
+    <p>
+    Date:
+<div  id="datepicker"> </div> 
+    </p>
+  </div>
+  <h3>Contact Information</h3>
+  <div>
+  
+<p><label for="name1">Name:</label><input type = "text" input id ="name1" name = "firstname" size = "5" title="Please enter your first name" />
+
+<p><label for="name2">Last name:</label><input type = "text" name = "lastname" title="Please enter your last name" />
+
+<p><label for="email">Email:</label><input type = "text" name = "email" title="Please enter your email" /> 
+
+<p><label for="phone">Contact:</label><input type = "text" name = "contact information" title="Please enter your phone number" />
+
+<p><label for="address">Home address:</label><textarea rows = "5" cols = "20" > </textarea> 
+
+</p>
+<style>
+  label {
+    display: inline-block;
+    width: 5em;
+  }
+  </style>
+  
+<p><label for="text">Your age:</label><input id="text" size="3" title="Is a real order"></p>
+
+ 
+  </div>
+  <h3>Delivery Information</h3>
+  <div>
+    <p>
+	
+ <img height="200" width="400" src="./img/special.jpg"  /> 
+<br>
+
+ <form action="OrderComplete.html">
+<button id="opener" type= "submit">Submit</button>
+ 
+</form>
+    </p>
+    <ul>
+      <li>Click here to place your order</li>
+    </ul>
+  </div>
+  
+</div>
+ 
+ 
+</body>
+
+<footer>
+<div style="height:200px; width:2000px; background-color:red" >
+<img src="./img/starlogo.png"/>
+
+<br>
+46 Talbot street, Dublin 1, Dublin, Ireland.</br>
+<br>
+Phone no : 01-8194605 </br>
+<br> Copyright 2017 Star Pizza </br>
+</div>
+</footer>
+
+</html>
